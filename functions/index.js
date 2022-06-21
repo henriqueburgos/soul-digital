@@ -1,6 +1,9 @@
 const functions = require("firebase-functions");
-const {api} = require("./api")
-const admin = require("firebase-admin")
+const admin = require("firebase-admin");
 
 admin.initializeApp();
-exports.api = functions.https.onRequest(api)
+
+const { api } = require("./api"); // import {api} from "./api"
+
+// setup das functions
+exports.api = functions.https.onRequest(api);
